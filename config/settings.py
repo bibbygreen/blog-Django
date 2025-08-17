@@ -38,7 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'users',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
+CRIPSY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_URL = 'login'          # 或 '/login/' 也行
+LOGIN_REDIRECT_URL = 'home'  # Login 成功預設要去哪
+LOGOUT_REDIRECT_URL = 'login'   # 若沒在 LogoutView 指 next_page
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
